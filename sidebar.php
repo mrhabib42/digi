@@ -26,7 +26,7 @@
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
-      <img src="./dist/logo/Habib App (1).png" height="50" width="70" alt="DIGICRAF TECH Logo" class="img-fluid " style="opacity: .8 ">
+      <img src="./dist/logo/Habib App (1).png" height="50" width="70" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
       <!-- <span class="brand-text font-weight-bold">DIGI CRAF TECH</span> -->
     </a>
 

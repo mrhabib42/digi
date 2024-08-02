@@ -2,12 +2,12 @@
 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="">
-            <!-- <i class="fas fa-laugh-wink"></i> -->
-            <img src="../../dist/logo/Habib App.png" height="200" alt="img">
-        </div>
-        <div class="sidebar-brand-text mx-3">DCT ADMIN</div>
+    <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html"> -->
+        <a href="../index.php" class="brand-link h-80">
+            <img src="../dist/logo/Habib App (1).png" height="100" width="70" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
+            <!-- <span class="brand-text font-weight-bold">DIGI CRAF TECH</span> -->
+        </a>
+        <!-- <div class="sidebar-brand-text mx-3">DCT ADMIN</div> -->
     </a>
 
     <!-- Divider -->
@@ -29,7 +29,7 @@
         }
     </style>
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="./leave_confirmation.php">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>leave Confirmation</span></a>
     </li>
@@ -58,7 +58,7 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-dark py-2 collapse-inner rounded">
                 <h6 class="collapse-header text-white">Employees:</h6>
-                <a class="collapse-item ci text-white" href="#">Create Employee</a>
+                <a class="collapse-item ci text-white" href="./create_employee.php">Create Employee</a>
                 <a class="collapse-item ci text-white" href="#">Show Employees</a>
             </div>
         </div>
@@ -86,7 +86,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li>
