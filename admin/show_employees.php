@@ -44,7 +44,7 @@
                             <td><?= $row['id'] ?></td>
                             <td><a href="#"><?= $row['user_username'] ?></a></td>
                         </tr>
-                        <?php print_r($row['user_img'])?>
+
 
                     <?php } ?>
                 </tbody>

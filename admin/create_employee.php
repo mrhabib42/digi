@@ -8,39 +8,83 @@ if (isset($_POST['submit'])) {
     $user_password = $_POST['user_password'];
     $user_img = $_FILES['user_img']['name'];
 
-
     $target_directory = "../uploads/";
-    $target_file = $target_directory . basename($_FILES["user_img"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($_FILES["user_img"]["name"], PATHINFO_EXTENSION));
+
+    // Generate a unique name for the file before saving it
+    $unique_name = uniqid() . "." . $imageFileType;
+    $target_file = $target_directory . $unique_name;
     $uploadOk = 1;
 
+    // Check if the file type is allowed
     if ($imageFileType != "jpg" && $imageFileType != "gif" && $imageFileType != "png" && $imageFileType != "jpeg") {
         echo "Sorry, only JPG, JPEG, GIF & PNG files are allowed.";
         $uploadOk = 0;
     }
 
+    // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
-        echo "Sorry Your File was not Uploaded";
+        echo "Sorry, your file was not uploaded.";
     } else {
+        // Try to upload the file
         if (move_uploaded_file($_FILES['user_img']["tmp_name"], $target_file)) {
-            mysqli_query($db_conn, "INSERT INTO `tbl_user_create`(`user_username`, `user_password`, `user_img`) 
-            VALUES ('$user_username','$user_password','$user_username')");
-
-            $_SESSION['success-msg'] = "Employee has been created successfully";
-            echo "<script>location.href='./show_employees.php'</script>";
-
-            exit;
-        }
-        else{
+            // Insert into the database with the unique file name
+            $query = "INSERT INTO `tbl_user_create`(`user_username`, `user_password`, `user_img`) 
+                      VALUES ('$user_username','$user_password','$unique_name')";
+            
+            if (mysqli_query($db_conn, $query)) {
+                $_SESSION['success-msg'] = "Employee has been created successfully";
+                echo "<script>location.href='./show_employees.php'</script>";
+                exit;
+            } else {
+                echo "Database insertion failed: " . mysqli_error($db_conn);
+            }
+        } else {
             echo "Sorry, there was an error uploading your file.";
         }
     }
+}
+
+
+
+// if (isset($_POST['submit'])) {
+//     $user_username = $_POST['user_username'];
+//     $user_password = $_POST['user_password'];
+//     $user_img = $_FILES['user_img']['name'];
+
+
+//     $target_directory = "../uploads/";
+//     $target_file = $target_directory . basename($_FILES["user_img"]["name"]);
+//     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+//     $uploadOk = 1;
+
+//     if ($imageFileType != "jpg" && $imageFileType != "gif" && $imageFileType != "png" && $imageFileType != "jpeg") {
+//         echo "Sorry, only JPG, JPEG, GIF & PNG files are allowed.";
+//         $uploadOk = 0;
+//     }
+
+//     if ($uploadOk == 0) {
+//         echo "Sorry Your File was not Uploaded";
+//     } else {
+//         if (move_uploaded_file($_FILES['user_img']["tmp_name"], $target_file)) {
+//             mysqli_query($db_conn, "INSERT INTO `tbl_user_create`(`user_username`, `user_password`, `user_img`) 
+//             VALUES ('$user_username','$user_password','$user_username')");
+
+//             $_SESSION['success-msg'] = "Employee has been created successfully";
+//             echo "<script>location.href='./show_employees.php'</script>";
+
+//             exit;
+//         }
+//         else{
+//             echo "Sorry, there was an error uploading your file.";
+//         }
+//     }
     // $tempname = $_FILES['user_img']['tmp_name'];
     // $folder = '../uploads' . $user_img;
     // $imgName = $user_username;
 
     // move_uploaded_file($user_img['tmp_name'], '../uploads/' . $imgName);
-}
+// }
 // print_r($tempname);
 
 ?>
