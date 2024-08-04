@@ -37,6 +37,19 @@ if (!isset($_SESSION["email"])) {
     position: absolute;
     top: 150px;
   }
+  .bg-img{
+    background:url('./dist/logo/logo.png');
+    object-fit: cover;
+    background-position:cover;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.1;
+
+  }
 </style>
 <!-- Main content -->
 <div class="bg-img">
@@ -67,57 +80,6 @@ if (!isset($_SESSION["email"])) {
     </div>
 
     <div class="col-lg-4 col-md-4 col-sm-4 col">
-      <div class="buttons p-4">
-        <button id="startButton" class="btn btn-success">Sign In</button>
-        <button id="stopButton" class="btn btn-danger">Sign Out</button>
-        <span id="timer" class="">00:00:00</span>
-        <script>
-          let timerInterval;
-          let seconds = 0;
-
-          function updateTimerDisplay() {
-            const hours = String(Math.floor(seconds / 3600)).padStart(2, '0');
-            const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
-            const secs = String(seconds % 60).padStart(2, '0');
-            document.getElementById('timer').textContent = `${hours}:${minutes}:${secs}`;
-          }
-
-          document.getElementById('startButton').addEventListener('click', () => {
-            if (!timerInterval) {
-              timerInterval = setInterval(() => {
-                seconds++;
-                updateTimerDisplay();
-              }, 1000);
-            }
-          });
-
-          document.getElementById('stopButton').addEventListener('click', () => {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            // Save the recorded time to the database
-            saveTimeToDatabase(seconds);
-          });
-
-          function saveTimeToDatabase(timeInSeconds) {
-            fetch('save_time.php', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                  time: timeInSeconds
-                }),
-              })
-              .then(response => response.json())
-              .then(data => {
-                console.log('Time saved:', data);
-              })
-              .catch((error) => {
-                console.error('Error saving time:', error);
-              });
-          }
-        </script>
-      </div>
       <div class="card">
         <div class="card-header p-2 text-center">
           <h5><strong>Leave Quota</strong></h5>

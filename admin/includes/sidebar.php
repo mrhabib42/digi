@@ -3,12 +3,21 @@
 
     <!-- Sidebar - Brand -->
     <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html"> -->
-        <a href="../index.php" class="brand-link h-80">
-            <img src="../dist/logo/Habib App (1).png" height="100" width="70" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
+        <style>
+            .box{
+                height: 67px;
+                width: 120px;
+                position: relative;
+                left: 0px;
+            }
+        </style>
+        <div class="box">
+        <a href="./index.php" class="brand-link sidebar-brand">
+            <img src="../dist/logo/Habib App (1).png" height="70" width="250" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
             <!-- <span class="brand-text font-weight-bold">DIGI CRAF TECH</span> -->
         </a>
+        </div>
         <!-- <div class="sidebar-brand-text mx-3">DCT ADMIN</div> -->
-    </a>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
@@ -59,7 +68,7 @@
             <div class="bg-dark py-2 collapse-inner rounded">
                 <h6 class="collapse-header text-white">Employees:</h6>
                 <a class="collapse-item ci text-white" href="./create_employee.php">Create Employee</a>
-                <a class="collapse-item ci text-white" href="#">Show Employees</a>
+                <a class="collapse-item ci text-white" href="show_employees.php">Show Employees</a>
             </div>
         </div>
     </li>
