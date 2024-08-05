@@ -7,7 +7,7 @@
             <div class="col-sm-12 p-3">
                 <h3 class="page-title">Profile</h3>
                 <ul class="breadcrumb bg-transparent">
-                    <li class="breadcrumb-item"><a href="#">Dashboard</a>
+                    <li class="breadcrumb-item"><a href="./user_dashboard.php">Dashboard</a>
                     </li>
                     <li class="breadcrumb-item text-muted">Profile</li>
                 </ul>
@@ -30,7 +30,7 @@
                                     <div class="mr-5 p-0">
                                         <img src="./dist/img/avatar2.png" width="120" alt="" class="mw-100 border rounded-circle img-fluid">
                                     </div>
-                                    <div class="profile-info-left ">
+                                    <div class="profile-info-left">
                                         <h3 class="user-name m-t-0 mb-0">Habib Ullah</h3>
                                         <div class="staff-id">User Name : hu1641</div>
                                         <div class="staff-id">Employee Code : 1641</div>
@@ -49,7 +49,6 @@
                                             <span><b>Gender:</b></span><br>
                                             <span><b>Reports to:</b></span><br>
                                         </div>
-
                                         <div class="col-md-8 col">
                                             <span><a href="tel:+923192476803">+923192476803</a></span> <br>
                                             <span><a href="mailto:habibullah1x1@gmail.com">habibullah1x1@gmail.com</a></span><br>

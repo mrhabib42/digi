@@ -9,7 +9,7 @@
   <title>DIGI CRAF TECH</title>
 
   <!-- Title Icon -->
-  <link rel="icon" href="./dist/logo/Habib App (1).png" type="image/x-icon" />
+  <link rel="icon" href="./dist/logo/logo.png" type="image/x-icon" />
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->

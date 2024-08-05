@@ -1,13 +1,17 @@
 <?php include 'header.php';
 ?>
 
-<section class="bg-light vh-100 d-flex">
-  <div class="col-3 m-auto">
+<!-- <?php
+// print_r(password_hash("admin", PASSWORD_DEFAULT));
+// die();
+?> -->
+<section class="row bg-light vh-100 d-flex ">
+  <div class="col-lg-3 col-md-3 col-sm-3 m-auto">
     <div class="card">
       <div class="card-body">
         <div class="rounded-circle mx-auto d-flex " style="width:100px;height:100px">
           <div class="login-logo">
-            <img src="./dist/logo/Habib App (1).png" class="img-fluid" alt="">
+            <img src="./dist/logo/logo.png" class="img-fluid" alt="">
           </div>
         </div>
         <style>
@@ -17,6 +21,7 @@
             height: 300px;
             width: 400px;
           }
+
         </style>
 
         <!--Form-->
@@ -24,7 +29,7 @@
           <!-- Material input -->
           <div class="form-group">
             <label for="inputPassword5" class="form-label">User Name</label>
-            <input type="text" id="inputPassword5" name="email" class="form-control" placeholder="Enter Username">
+            <input type="text" id="inputPassword5" name="username" class="form-control" placeholder="Enter Username">
           </div>
           <!-- Material input -->
           <div class="form-group">
@@ -39,5 +44,4 @@
     </div>
   </div>
 </section>
-
-<?php include 'footer.php' ?>
+</div>

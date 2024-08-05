@@ -1,25 +1,53 @@
 <?php
+include './config.php';
 session_start();
-$_SESSION['login'] = true;
+// $valid_email = 'hu1641';
+// $valid_password = '1234';
 
-$valid_email = 'hu1641';
-$valid_password = '1234';
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
 
 
-
-if (isset($_POST['login'])) {
-    $email = $_POST['email'];
+    $username = trim($_POST['username']);
     $password = $_POST['password'];
 
-    if ($email === $valid_email && $password === $valid_password) {
-        $_SESSION["email"] = $email;
-        header('Location: index.php');
-        exit;
+    $query = "SELECT * FROM `create_user` WHERE user_username ='$username';";
+    $result = mysqli_query($db_conn, $query);
+
+
+    if ($result->num_rows == 1) {
+        $row = mysqli_fetch_assoc($result);
+        if ($password == $row['user_password']) {
+        //   if(password_verify($password, $row['user_password'])){
+            if ($row['user_role'] == 1111) {
+                $_SESSION['user_credentials'] = ["email" => $row['user_username'], "role" => 1111];
+                header("Location: ./admin/admin_dashboard.php");
+                die();
+            } else if ($row['user_role'] == 2222) {
+                $_SESSION['user_credentials'] = ["email" => $row['user_username'], "role" => 2222];
+                header("Location: user_dashboard.php");
+                die();
+            }
+            else if ($row['user_role'] == 3333) {
+                $_SESSION['user_credentials'] = ["email" => $row['user_username'], "role" => 3333];
+                header("Location: ceo.php");
+                die();
+            }
+            else if ($row['user_role'] == 4444) {
+                $_SESSION['user_credentials'] = ["email" => $row['user_username'], "role" => 4444];
+                header("Location: teamleader.php");
+                die();
+            }else{
+                // echo "Invalid User";
+            }
+        } else {
+            echo "error message";
+            // header("Location: index.php");
+            // die();
+        }
     } else {
-        echo 'Invalid credentials';
+        die("Query failed: " . mysqli_error($db_conn));
     }
 }
-if (isset($_SESSION['login'])) {
-    unset($_SESSION['login']);
-    session_destroy();
-}
+// }
+
+?>

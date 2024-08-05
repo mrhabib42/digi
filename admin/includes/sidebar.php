@@ -13,7 +13,7 @@
         </style>
         <div class="box">
         <a href="./index.php" class="brand-link sidebar-brand">
-            <img src="../dist/logo/Habib App (1).png" height="70" width="250" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
+            <img src="../dist/logo/logo.png" height="70" width="250" alt="DIGICRAF TECH Logo" class="img-fluid" style="opacity: .8 ">
             <!-- <span class="brand-text font-weight-bold">DIGI CRAF TECH</span> -->
         </a>
         </div>
@@ -24,7 +24,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="./admin_dashboard.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -67,8 +67,8 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-dark py-2 collapse-inner rounded">
                 <h6 class="collapse-header text-white">Employees:</h6>
-                <a class="collapse-item ci text-white" href="./create_employee.php">Create Employee</a>
-                <a class="collapse-item ci text-white" href="show_employees.php">Show Employees</a>
+                <a class="collapse-item ci text-white" href="./create_user.php">Create Employee</a>
+                <a class="collapse-item ci text-white" href="show_users.php">Show Employees</a>
             </div>
         </div>
     </li>
@@ -278,7 +278,7 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION["admin_username"] ?></span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                         <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                     </a>
                     <!-- Dropdown - User Information -->
@@ -296,7 +296,7 @@
                             Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a class="dropdown-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>
