@@ -1,21 +1,29 @@
-<?php include 'includes/header.php' ?>
-<?php require_once 'includes/sidebar.php' ?>
 <?php 
-// $email = true;
-// include 'includes/sidebar.php';
-// if (!isset($_SESSION["admin_login"])) {
-//     // $_SESSION["admin_username"] = $email;
-//     echo "<script>location.href='./admin_login.php'</script>";
+require_once 'includes/header.php'; 
+require_once 'includes/sidebar.php';
+require_once '../config.php'; 
+
+// if(isset($_SESSION['user_credentials']) && !empty($_SESSION['user_credentials'])){
+//   $email = $_SESSION['user_credentials']["email"];
+//   $query = "SELECT * FROM `create_user` WHERE user_username ='$email'";
+//   $result = mysqli_query($db_conn, $query);
+//   if ($result->num_rows == 1) {
+//     $data = mysqli_fetch_assoc($result);
+//   }else{
+//     echo "<script>location.href='../logout.php'</script>";
+//       die();
+//   }
+// }else{
+//     echo "<script>alert(../logout.php)</script>";
+//   die();
 // }
 ?>
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Admin Dashboard</h1>
-        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+        <a href="#" class="d-none d-sm-inline-block btn web-btn shadow-sm"><i class="fas fa-download fa-sm text-white   "></i> Generate Report</a>
     </div>
 
     <!-- Content Row -->

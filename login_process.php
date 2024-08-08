@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
                 // echo "Invalid User";
             }
         } else {
-            echo "error message";
+            echo "password error..";
             // header("Location: index.php");
             // die();
         }

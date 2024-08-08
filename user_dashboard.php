@@ -2,7 +2,7 @@
 include "header.php";
 include 'config.php';
 
-if(isset($_SESSION['user_credentials']) && $_SESSION['user_credentials']!=""){
+if(isset($_SESSION['user_credentials'])){
   $email = $_SESSION['user_credentials']["email"];
   $query = "SELECT * FROM `create_user` WHERE user_username ='$email';";
   $result = mysqli_query($db_conn, $query);

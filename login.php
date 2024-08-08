@@ -9,7 +9,7 @@
   <div class="col-lg-3 col-md-3 col-sm-3 m-auto">
     <div class="card">
       <div class="card-body">
-        <div class="rounded-circle mx-auto d-flex " style="width:100px;height:100px">
+        <div class="rounded-circle mx-auto d-flex" style="width:100px; height:100px;">
           <div class="login-logo">
             <img src="./dist/logo/logo.png" class="img-fluid" alt="">
           </div>

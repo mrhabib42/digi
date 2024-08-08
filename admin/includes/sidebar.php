@@ -46,7 +46,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-user-clock"></i>
             <span>Attendance</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -61,14 +61,14 @@
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Employees</span>
+            <i class="fas fa-fw fa-user"></i>
+            <span>Users</span>
         </a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-dark py-2 collapse-inner rounded">
-                <h6 class="collapse-header text-white">Employees:</h6>
-                <a class="collapse-item ci text-white" href="./create_user.php">Create Employee</a>
-                <a class="collapse-item ci text-white" href="show_users.php">Show Employees</a>
+                <h6 class="collapse-header text-white">Users:</h6>
+                <a class="collapse-item ci text-white" href="./create_user.php">Create User</a>
+                <a class="collapse-item ci text-white" href="show_users.php">Show Users</a>
             </div>
         </div>
     </li>
@@ -76,16 +76,14 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOn" aria-expanded="true" aria-controls="collapseOn">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span class="text-wrap">Employees Information</span>
         </a>
         <div id="collapseOn" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-dark py-2 collapse-inner rounded">
                 <h6 class="collapse-header text-white">Employees Information:</h6>
-                <a class="collapse-item ci text-white text-wrap" href="#">Add Employeement Information</a>
-                <a class="collapse-item ci text-white text-wrap" href="#">Show Employeement Information</a>
-                <a class="collapse-item ci text-white text-wrap" href="#">Add Persnol Information</a>
-                <a class="collapse-item ci text-white text-wrap" href="#">Show Persnol Information</a>
+                <a class="collapse-item ci text-white text-wrap" href="./add_employment.php">Add Employeement Information</a>
+                <a class="collapse-item ci text-white text-wrap" href="./show_employment.php">Show Employeement Information</a>
             </div>
         </div>
     </li>

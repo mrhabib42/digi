@@ -3,19 +3,22 @@
 <?php include './includes/sidebar.php' ?>
 
 <div class="content container-fluid">
-    <div class="page-header">
-        <div class="row align-items-center">
-            <div class="col-sm-12 p-3">
-                <h3 class="page-title text-dark">Show Employees</h3>
-                <ul class="breadcrumb bg-transparent">
-                    <li class="breadcrumb-item"><a href="./admin_dashboard.php">Admin</a>
-                    </li>
-                    <!-- <li class="breadcrumb-item"><a href="">Leave</a></li> -->
-                    <li class="breadcrumb-item text-muted">Show Employee</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="d-sm-flex align-items-center justify-content-between">
+    <h1 class="h3 mb-0 text-gray-800">Show Users</h1>
+    <a
+      href="./create_user.php"
+      class="d-none d-sm-inline-block btn btn-sm web-btn shadow-sm"
+      ><i class="fas fa-user-plus fa-sm text-white"></i> Create User</a
+    >
+  </div>
+  <div class="col-sm-12 p-2">
+    <!-- <h3 class="page-title text-dark">Show Employees</h3> -->
+    <ul class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="./admin_dashboard.php">Admin</a></li>
+      <!-- <li class="breadcrumb-item"><a href="">Leave</a></li> -->
+      <li class="breadcrumb-item text-muted">Show Users</li>
+    </ul>
+  </div>
 </div>
 <div class="container">
     <div class="card">
@@ -44,7 +47,7 @@
                             <td><img src="../uploads/<?= $row['user_img'] ?>" height="50" width="48" class="mw-40 border rounded-circle" alt="User Image"></td>
                             <td><?= $row['user_id'] ?></td>
                             <td><a href="#"><?= $row['user_username'] ?></a></td>
-                            <td><a href="#"><?= $row['user_role'] ?></a></td>
+                            <td><?= $row['user_role'] ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>

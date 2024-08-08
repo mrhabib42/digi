@@ -6,7 +6,7 @@
 if (isset($_POST['submit'])) {
     $user_username = $_POST['user_username'];
     $user_password = $_POST['user_password'];
-    $user_role = $_POST['user_role'];
+    $user_role = $_POST['role'];
     $user_img = $_FILES['user_img']['name'];
 
     $target_directory = "../uploads/";
@@ -47,54 +47,56 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-
-
 <div class="content container-fluid">
-    <div class="page-header">
-        <div class="row align-items-center">
-            <div class="col-sm-12 p-3">
-                <h3 class="page-title text-dark">Create Employee</h3>
-                <ul class="breadcrumb bg-transparent">
-                    <li class="breadcrumb-item"><a href="./index.php">Admin</a>
-                    </li>
-                    <!-- <li class="breadcrumb-item"><a href="">Leave</a></li> -->
-                    <li class="breadcrumb-item text-muted">Create Employee</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="d-sm-flex align-items-center justify-content-between">
+    <h1 class="h3 mb-0 text-gray-800">Create User</h1>
+    <!-- <a
+      href="#"
+      class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+      ><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a
+    > -->
+  </div>
+  <div class="col-sm-12 p-2">
+    <!-- <h3 class="page-title text-dark">Show Employees</h3> -->
+    <ul class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="./admin_dashboard.php">Admin</a></li>
+      <!-- <li class="breadcrumb-item"><a href="">Leave</a></li> -->
+      <li class="breadcrumb-item text-muted">Create User</li>
+    </ul>
+  </div>
 </div>
 <div class="col-md-4 col-sm-4 col mx-auto ">
     <div class="card">
         <div class="card-body">
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" class="text-dark" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="from">Username *</label>
+                    <label for="from">Username <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" name="user_username" id="from" placeholder="Enter username" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="to">Password *</label>
-                    <input type="password" class="form-control" name="user_password" placeholder="Enter Password" id="to" required>
+                    <label for="to">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="user_password" id="to" placeholder="Enter Password" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="formFileSm">User Picture</label>
+                    <label for="formFileSm">User Picture <span class="text-danger">*</span></label>
                     <input type="file" class="form-control" name="user_img" id="formFileSm">
                 </div>
 
                 <div class="form-group">
-                    <select name="role" name="user_role" class="form-control" id="">
-                        <option  value="1111">Admin</option>
-                        <option  value="2222">User</option>
-                        <option  value="3333">CEO</option>
-                        <option  value="4444">Team Leader</option>
+                    <label for="userRole">User Role <span class="text-danger">*</span></label>
+                    <select name="role" id="userRole" class="form-control">
+                        <option value="1111">Admin</option>
+                        <option value="2222">User</option>
+                        <option value="3333">CEO</option>
+                        <option value="4444">Team Leader</option>
                     </select>
                 </div>
 
-                <button type="submit" name="submit" class="btn btn-primary btn-block">Create Employee</button>
+                <button type="submit" name="submit" class="btn web-btn btn-block">Create Employee</button>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 

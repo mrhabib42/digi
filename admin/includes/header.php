@@ -18,6 +18,16 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+<style>
+    .web-btn {
+        background-color: #0a2158;
+        color: white;
+    }
+
+    .web-btn:hover {
+        color: white;
+    }
+</style>
 
 <body id="page-top">
     <!-- Page Wrapper -->

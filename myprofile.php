@@ -55,7 +55,7 @@
                                             <span class="text-muted">2004-03-09</span><br>
                                             <span class="text-muted">Malir, Karachi.</span><br>
                                             <span class="text-muted">Male</span><br>
-                                            <img src="./dist/img/avatar5.png" width="24px" class="img-fluid rounded-circle" alt=""><span class="text-muted"> Hassan Javed</span><br>
+                                            <img src="./dist/img/avatar.png" width="24px" class="img-fluid rounded-circle" alt=""><span class="text-muted"> Hassan Javed</span><br>
                                         </div>
                                     </div>
                                 </div>
